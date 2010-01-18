@@ -1,14 +1,13 @@
 use strict;
 use vars qw($VERSION %IRSSI);
 use Irssi qw(signal_add_last);
-#use Mac::Growl qw(:all);
 
 $VERSION = '1.00';
 %IRSSI = (
     authors     => 'Ravage',
     contact     => 'ravage@fragmentized.net',
     name        => 'Growl Channel Notification',
-    description => 'Notifies via Growl if a message is sent in a channel', 
+    description => 'Notifies via Growl if a message is sent in a channel. Assumes growlnotify is in /usr/local/bin', 
     license     => 'Public Domain'
 );
  
