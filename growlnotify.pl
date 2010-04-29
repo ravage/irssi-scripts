@@ -13,7 +13,8 @@ $VERSION = '1.00';
  
 sub pub_msg {
     my ($server, $msg, $nick, $address, $target) = @_;
-    system("/usr/local/bin/growlnotify -n Irssi -t '$nick in $target' -m '$msg'");
+    my @command = ("/usr/local/bin/growlnotify", "-n", "Irssi", "-t", "$nick in $target", "-m", $msg);
+    system @command; 
 }
 
 signal_add_last("message public", "pub_msg");
